@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.Networking;
 using System;
 
-public class Messages
+public class NetworkInputMessages
 {
     public class InputKeyMessage : MessageBase
     {

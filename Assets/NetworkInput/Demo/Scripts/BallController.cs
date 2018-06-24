@@ -14,9 +14,9 @@ public class BallController : MonoBehaviour
         }
 	}
 
-    public void OnNetworkInputKeyRecieved(KeyCode keyCode, Messages.InputKeyMessage.KeyState state)
+    public void OnNetworkInputKeyRecieved(KeyCode keyCode, NetworkInputMessages.InputKeyMessage.KeyState state)
     {
-        if (state == Messages.InputKeyMessage.KeyState.Down)
+        if (state == NetworkInputMessages.InputKeyMessage.KeyState.Down)
         {
             if (keyCode == KeyCode.W)
             {
@@ -27,7 +27,7 @@ public class BallController : MonoBehaviour
                 transform.position = Vector3.zero;
             }
         }
-        else if(state == Messages.InputKeyMessage.KeyState.Up)
+        else if(state == NetworkInputMessages.InputKeyMessage.KeyState.Up)
         {
             if (keyCode == KeyCode.W)
             {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MousePositionListener : MonoBehaviour
+public class MousePositionText : MonoBehaviour
 {
     private Text textBox;
 

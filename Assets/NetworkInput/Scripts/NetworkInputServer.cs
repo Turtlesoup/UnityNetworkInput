@@ -20,11 +20,11 @@ public class NetworkInputServer : MonoBehaviour
         {
             if (Input.GetKeyDown(vKey))
             {
-                SendInputKeyMessage(vKey, Messages.InputKeyMessage.KeyState.Down);
+                SendInputKeyMessage(vKey, NetworkInputMessages.InputKeyMessage.KeyState.Down);
             }
             else if(Input.GetKeyUp(vKey))
             {
-                SendInputKeyMessage(vKey, Messages.InputKeyMessage.KeyState.Up);
+                SendInputKeyMessage(vKey, NetworkInputMessages.InputKeyMessage.KeyState.Up);
             }
         }
 
@@ -61,19 +61,19 @@ public class NetworkInputServer : MonoBehaviour
 
     #region Messages
 
-    private void SendInputKeyMessage(KeyCode keycode, Messages.InputKeyMessage.KeyState state)
+    private void SendInputKeyMessage(KeyCode keycode, NetworkInputMessages.InputKeyMessage.KeyState state)
     {
-        Messages.InputKeyMessage newMessage = new Messages.InputKeyMessage();
+        NetworkInputMessages.InputKeyMessage newMessage = new NetworkInputMessages.InputKeyMessage();
         newMessage.Code = keycode;
         newMessage.State = state;
-        NetworkServer.SendToAll(Messages.InputKeyMessage.MessageType, newMessage);
+        NetworkServer.SendToAll(NetworkInputMessages.InputKeyMessage.MessageType, newMessage);
     }
 
     private void SendMousePositionMessage(Vector3 mousePosition)
     {
-        Messages.MousePositionMessage newMessage = new Messages.MousePositionMessage();
+        NetworkInputMessages.MousePositionMessage newMessage = new NetworkInputMessages.MousePositionMessage();
         newMessage.MousePosition = mousePosition;
-        NetworkServer.SendToAll(Messages.MousePositionMessage.MessageType, newMessage);
+        NetworkServer.SendToAll(NetworkInputMessages.MousePositionMessage.MessageType, newMessage);
     }
 
     #endregion
