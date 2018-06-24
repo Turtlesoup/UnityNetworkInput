@@ -1,0 +1,1 @@
+NetworkInput provides a simple way to connect the input of the mouse and keyboard on one device to another. It was originally developed to provide a way to control debug tools on a mobile application and to control a mobile VR application through a connected PC's keyboard and mouse.
