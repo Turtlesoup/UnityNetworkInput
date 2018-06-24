@@ -35,9 +35,4 @@ public class BallController : MonoBehaviour
             }
         }
     }
-
-    public void OnMousePositionRecieved(Vector3 mousePosition)
-    {
-        Debug.Log("Mouse position! " + mousePosition.ToString());
-    }
 }
